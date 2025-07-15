@@ -1,0 +1,36 @@
+kafka:
+  topic:
+    ddr: ddr-topic
+loader:
+  mode: jdbc
+
+spring:
+  kafka:
+    bootstrap-servers: 192.168.86.18:9094,192.168.86.19:9094
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        json:
+          add-type-info-headers: false
+
+  datasource:
+    url: jdbc:clickhouse:http://localhost:8123/default
+    username: default
+    password: default
+    driver-class-name: com.clickhouse.jdbc.ClickHouseDriver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 60000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+  sql:
+    init:
+      mode: never
+
+
+#clickhouse:
+#  url: jdbc:clickhouse://localhost:8123/default
+#  user: default
+#  password:""

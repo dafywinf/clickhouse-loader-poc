@@ -1,0 +1,61 @@
+# 🛡️ Ignore TLS certs and keys
+certs/*.crt
+certs/*.key
+
+# 🧪 Local override values
+values.local.yaml
+
+# 💻 IntelliJ IDEA files
+.idea/
+*.iml
+
+# 🍎 macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 💾 Misc temp/editor files
+*.swp
+*.swo
+*.tmp
+*~
+
+# ☕ Java / Spring Boot build output
+/target/
+/out/
+
+# ⚙️ Maven specific
+/logs/
+dependency-reduced-pom.xml
+release.properties
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+
+# 🔑 Sensitive application config
+application-local.properties
+application-dev.properties
+application-test.properties
+
+# 🧪 Test reports
+/surefire-reports/
+/jacoco.exec
+/test-output/
+
+# 🐘 IDE/Editor/OS-specific files
+*.log
+*.class
+*.jar
+*.war
+*.ear
+
+# 🌐 VSCode settings
+.vscode/
+
+# 🐳 Docker (if used)
+.env
+docker-compose.override.yml
+
+# 🧩 Checkstyle / Code quality tools
+checkstyle-output.xml
+pmd.xml
+findbugs.xml
